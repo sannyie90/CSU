@@ -2,11 +2,13 @@
 // Author: Mannan Ahmad
 // Date: 02/27/2025
 // Description: This program asks for product names and integer prices individually, ensures valid input,
-// dynamically stores them, displays values, and manages memory efficiently.
+// dynamically stores them, displays values and manages memory efficiently.
 
 #include <iostream>
-#include <limits>  // For input validation
-#include <string>  // For storing product names
+// For input validation
+#include <limits>
+// For storing product names
+#include <string>
 using namespace std;
 
 // Function to validate integer input
@@ -16,12 +18,16 @@ void getValidInteger(int &value) {
 
         // Check if input is valid
         if (cin.fail()) {
-            cin.clear(); // Clear the error flag
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
+        	// Clear the error flag
+            cin.clear();
+            // Discard invalid input
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout << "Error: Invalid input. Please enter an integer price: ";
         } else {
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Remove leftover newline
-            break; // Valid input, exit loop
+        	// Remove leftover newline
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            // Valid input, exit loop
+            break;
         }
     }
 }
